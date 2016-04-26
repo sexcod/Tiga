@@ -1,7 +1,7 @@
 # Tiga
 Tiga version of a NEOS PHP Framework (start in autumn, 2016)
 
-### ![Experimental](https://github.com/sexcod/Tiga/edit/master/img/expicon.png) *Experimental: Do not use in production!*
+### ![Experimental](https://github.com/sexcod/Tiga/blob/master/img/expicon.png) *Experimental: Do not use in production!*
 
 # Alpha version install
 Clone this with:
