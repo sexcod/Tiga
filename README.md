@@ -6,7 +6,6 @@ Project started in autumn 2016 by [Bill Rocha](https://google.com/+BillRocha)
 _Experimental: Do **not use** in production!_
 
 ### Alpha version install
-Clone this with:
 
     git clone https://github.com/sexcod/Tiga.git  
     cd Tiga   
