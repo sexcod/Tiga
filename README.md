@@ -1,5 +1,5 @@
 # Tiga
-Tiga version of a NEOS PHP Framework (start in autumn, 2016)
+NEOS {TIGA} PHP Framework (start in autumn, 2016)
 
 ![Experimental](https://github.com/sexcod/Tiga/blob/master/img/expicon.png)   
 _Experimental: Do **not use** in production!_
