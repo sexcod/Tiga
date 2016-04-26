@@ -1,0 +1,72 @@
+    		<div class="row">
+    			<div class="form-group col-sm-6" id="top">
+    				<h1>LAB</h1>
+    				<bloquote>Ajax + RSA + AES</bloquote>
+    			</div>
+
+    		</div>
+    		<hr />
+    		<div class="row">
+            	<div class="form-group col-sm-6">
+                    <label>Parametro 1</label>
+    				<input type="text" class="form-control" id="par1" value="" placeholder="Parametro 1">
+    				<label>Parametro 2</label>
+    				<input type="number" pattern="^[$\-\s]*[\d\,]*?([\.]\d{0,2})?\s*$" class="form-control" id="par2" value="" placeholder="Parametro 2">
+    				<label>Parametro 3</label>
+    				<input type="currency" class="form-control" id="par3" value="" placeholder="Parametro 3">
+    			</div>
+    			<div class="form-group col-sm-6">
+    				<label>Retorno</label>
+    				<textarea id="returno" class="form-control" placeholder="return" rows="7"></textarea>
+    			</div>
+    		</div>
+    		<div class="row">
+            	
+    		</div>
+            
+            <div class="row">
+                <div class="form-group col-sm-6" id="tabcontent"></div>
+            </div>
+
+    		<div class="row">
+            	<div class="form-group col-sm-6">
+    				<input type="file" class="form-control" id="file" value="" placeholder="" multiple="true">
+    			</div>
+    		</div>
+
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped active" role="progressbar" id="progressbar"
+                     aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">40%</div>
+            </div>
+
+    		<hr />
+    		<div class="row">
+            	<div class="form-group col-sm-6">
+    				<button type="button" class="btn btn-default" onclick="run()">Enviar formulário</button>
+                    <button type="button" class="btn btn-default" onclick="fileSend()">Upload</button>
+                    <button type="button" class="btn btn-default" onclick="fileRequest()">Download</button>
+    			</div>
+    		</div>
+
+            <div class="lg-content">
+                <div class="login">
+                    <h2>Tiga<span>login</span></h2>
+                    <input type="text" 
+                           name="login" 
+                           placeholder="Login" 
+                           autocomplete="off"
+                           autofocus
+                           required />
+
+                    <input type="password" 
+                           name="password" 
+                           placeholder="Senha" 
+                           autocomplete="off"
+                           required />
+
+                    <p id="msgLogin"></p>
+                    <div class="ctrl">
+                        <button type="submit" onclick="login()">Entrar</button>
+                    </div>
+                </div>
+            </div>

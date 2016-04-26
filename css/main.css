@@ -1,0 +1,116 @@
+.on {
+	position:fixed; 
+	index-z:4000; 
+	padding:10px 20px; 
+	margin:50px auto 0 -150px; 
+	top:20%; 
+	left:50%; 
+	width:300px; 
+	background: #FFC; 
+	border-radius:7px; 
+	border:1px solid #F00; 
+	transition:1s;
+	font-weight: 400;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #888;
+    line-height: 30px;        
+}
+
+/* AJUSTES */
+.btn { 
+	padding-left:20px;
+	padding-right: 20px;
+}
+
+.lg-content {
+    position: fixed;
+    top:0;
+    left: 0;
+    right:0;
+    bottom:0;
+    background: rgba(0,0,0,.8);
+    z-index: 4000;
+}
+.login {
+    position:fixed;
+    top:50%;
+    left:50%;
+    margin: -250px 0 0 -130px;
+    padding: 30px 30px 10px 30px;
+    background: #FFF;
+    border:1px solid #DDD;
+    border-radius: 8px;
+    width: 260px;
+    box-shadow: 0 6px 6px #222, 0 0 10px #999 inset;
+
+}
+.login h2 {
+    color:#825;
+    font-size: 6.4em;
+    font-weight: 600;
+    margin:0 0 70px 0;
+    text-shadow: 1px 1px 12px #99A;
+    text-align: center;
+}
+.login h2 span {
+    position:absolute;
+    right:28px;
+    z-index: -1;
+    margin:-22px 0 30px 0;
+    display:block;
+    text-shadow:none;
+    font-size: .6em;
+    font-weight: 100;
+    color:#DCC;
+}
+.login p {
+    color:#F60;
+    font-weight: 400;
+}
+input {
+    border:none;
+    border-bottom: 1px solid #CCC;
+    color: #000;
+    font-weight: 100;
+    width:100%;
+    margin: 10px 0;
+}
+button {
+    cursor: pointer;
+    background: transparent;
+    border:none;
+    font-weight: bold;
+}
+.ctrl {
+    text-align: right;
+}
+.ctrl button {
+    padding: 20px 3px 20px 20px;
+    color:#CCC;
+}
+button:hover{
+    color:#000;
+}
+
+table {
+    border-collapse:separate;
+    border-spacing:0;
+    margin:0 0 40px 0;
+    width: 100%;
+}
+th, td{
+    border-bottom:1px solid #DDD;
+    padding:5px 10px;
+    text-align:left;
+    color:#000; 
+}
+td:last-child,
+th:last-child {width: 1%;}
+td:last-child {text-align:right}
+
+.progress {display:none;}
