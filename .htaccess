@@ -6,11 +6,9 @@ ServerSignature Off
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteBase /
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
-    #RewriteRule ^(.*)$ index.php?rqst=$1 [QSA,L]
-    RewriteRule . lab/index.php [L]
+    RewriteRule . index.php [L]
 </IfModule>
 
 <IfModule mod_expires.c>
