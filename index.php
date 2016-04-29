@@ -4,4 +4,4 @@
 include 'php/Config/App.php';
 
 // start Router
-Config\Router::this()->run();
+(new Lib\Router)->run();

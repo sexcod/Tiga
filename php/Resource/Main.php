@@ -55,6 +55,11 @@ class Main
     {
         if(isset($config['params'])) $this->params = $config['params'];
         if(isset($config['request'])) $this->request = $config['request'];
+
+        //if Twig teplate engine is required
+        if(isset($this->twig) 
+            && $this->twig == true) 
+            $this->twig = \Config\Twig\Twig::this();
     } 
 
     

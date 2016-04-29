@@ -17,9 +17,9 @@ window.onload = function(){
     //cancel();
 
     URL.base = window.location.origin;
-    URL.data = URL.base+'/lab/data/';
-    URL.file = URL.base+'/lab/file/';
-    URL.user = URL.base+'/lab/user/';
+    URL.data = URL.base+'/data/';
+    URL.file = URL.base+'/file/';
+    URL.user = URL.base+'/user/';
 
     TOKEN = _passw.gen(40);
 

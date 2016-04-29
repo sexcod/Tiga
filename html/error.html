@@ -16,7 +16,7 @@
             body {
 				background:#CCC;
 				background-image: linear-gradient(90deg, #9CF, #69C); 
-				font-family: Helvetica, sans-serif; color:#135; font-size: 1.2em;}
+				font-family: Helvetica, sans-serif; color:#135; font-size: 1em;}
 			.e404 {margin:15% 5% 10% 5%; padding:2%;}
 			p, a{ font-weight: 100; font-family: monospace; text-shadow: 1px 1px 1px #9CE;}
 			b {font-weight: 900; color:#000;}
@@ -29,6 +29,7 @@
 			td:first-child {border-left:none;}
 			td:last-child{text-align:right;}
 			table {border-collapse:separate;border-spacing:0;margin:0 0 40px 0;}
+			.up td {color:#900;}
 			@media (max-width: 768px) {
 				html {font-size: 80%;}				
 				table *{font-size:.9em;}
@@ -42,6 +43,7 @@
 		<div class="e404">
 			<h2>Oops :(</h2>
 			<h3><?php echo $errstr?></h3>
+			<?php if(isset($errfile)) echo '<p>'.$errfile.'</p>';?>
 			<table>
 				<tr>
 					<th>Action</th>

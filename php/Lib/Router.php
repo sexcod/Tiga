@@ -37,8 +37,7 @@ class Router
 
     static $node = null;
 
-    function __construct(
-        $routers = [], 
+    function __construct( 
         $request = null, 
         $url = null)
     {
@@ -48,7 +47,10 @@ class Router
         if ($url !== null)
             define('_URL', $url);        
 
-        $this->routers = $routers;
+        //Load configurations
+        if(method_exists('Config\Neos\Router', 'routers'))
+            (new \Config\Neos\Router)->routers($this);
+
         $this->method = $this->requestMethod();
         $this->mount();
     }

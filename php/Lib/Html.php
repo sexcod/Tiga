@@ -23,6 +23,7 @@ class Html
 
     private $pathHtml =         '';
     private $pathHtmlCache =    '';
+    private $pathWww =          '';
     private $pathStyle =        '';
     private $pathScript =       '';
 
@@ -46,23 +47,29 @@ class Html
      *
      */
     function __construct(
-        $name = 'default', 
-        $cached = false, 
-        $pathHtml = _HTML, 
-        $rootWWW = _WWW,
-        $mode = 'dev')
+        $name = null, 
+        $cached = null,
+        $mode = null)
     {
-        $this->name = $name;
-        $this->cached = $cached;
-        $this->mode = $mode;
+        if(method_exists('Config\Neos\Html', 'getParams')) {
+            foreach((new \Config\Neos\Html)->getParams() as $k=>$v){
+                $this->{$k} = $v;
+            }
+        } else {
+            $this->pathHtml = defined('_HTML') ? _HTML : '';
+            $this->pathWww  = defined('_WWW')  ? _WWW  : '';
 
-        $this->pathHtml = $pathHtml;
-        $this->pathHtmlCache = $pathHtml.'cache/';
-        $this->pathStyle = $rootWWW.'css/';
-        $this->pathScript = $rootWWW.'js/';
+            $this->pathHtmlCache = $this->pathHtml.'cache/';
+            $this->pathStyle = $this->pathWww.'css/';
+            $this->pathScript = $this->pathWww.'js/';
 
-        $this->header = $pathHtml.'header.html';
-        $this->footer = $pathHtml.'footer.html';
+            $this->header = $this->pathHtml.'header.html';
+            $this->footer = $this->pathHtml.'footer.html';
+        }
+
+        if($name !== null)   $this->name =   $name;
+        if($cached !== null) $this->cached = $cached;
+        if($mode !== null)   $this->mode =   $mode;
     }
 
     function body($v = null)
@@ -113,8 +120,18 @@ class Html
         return $this;
     }
 
-    function render()
+    function render($html = null, $val = null)
     {
+        if($html !== null){ 
+            $this->body($html);
+            $this->header(false);
+            $this->footer(false);
+        }
+        if($val !== null){
+            $this->val($val);
+        }
+
+
         if($this->cached &&
             file_exists($this->pathHtmlCache.$this->name.'_cache.html'))
                 return true;

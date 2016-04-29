@@ -1,11 +1,11 @@
 <?php
 /**
- * Limp - less is more in PHP
+ * NEOS PHP FRAMEWORK
  * @copyright   Bill Rocha - http://google.com/+BillRocha
  * @license     MIT
  * @author      Bill Rocha - prbr@ymail.com
  * @version     0.0.1
- * @package     Config\App
+ * @package     Config
  * @access      public
  * @since       0.3.0
  *
@@ -33,7 +33,7 @@
  */
 
 // Defaults
-error_reporting(E_ALL ^ E_STRICT);
+error_reporting(E_ALL ^ E_STRICT ^ E_WARNING);
 setlocale (LC_ALL, 'pt_BR');
 mb_internal_encoding('UTF-8');
 date_default_timezone_set('America/Sao_Paulo'); 
@@ -59,13 +59,11 @@ set_include_path(_APP.PATH_SEPARATOR.get_include_path());
 spl_autoload_register(function($class) {
     $file = _APP.str_replace('\\', '/', trim($class, '\\')).'.php';
     if(file_exists($file) !== false) require_once $file;
-    if (!class_exists($class, false)) {
-        trigger_error('Class "'.$class.'" not found!', E_USER_ERROR);
-    } else return true;
+    return class_exists($class, false);
 });
 
 // Composer autoloader
-if(file_exists(_APP.'vendor/autoload.php')) include _APP.'vendor/autoload.php';
+if(file_exists(_APP.'Composer/autoload.php')) include _APP.'Composer/autoload.php';
 
 // Error/Exception
 set_error_handler(['Lib\Debug','errorHandler']);

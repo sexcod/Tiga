@@ -5,7 +5,7 @@
  * @license     MIT
  * @author      Bill Rocha - prbr@ymail.com
  * @version     0.0.1
- * @package     Config
+ * @package     Config\Neos
  * @access      public
  * @since       0.3.0
  *
@@ -32,22 +32,20 @@
  * THE SOFTWARE.
  */
 
-namespace Config;
-use Lib\Router as TheRouter;
+namespace Config\Neos;
 
-class Router extends TheRouter
+class Router
 {
 
-    function __construct()
+    function routers(&$router)
     {
-        parent::__construct();
-
         //Routes:
 
-        $this->respond('get',  '/',    'Land\Testajax::index')
-             ->respond('post', 'file', 'Land\Testajax::file')
-             ->respond('post', 'data', 'Land\Testajax::data')
-             ->respond('post', 'user', 'Land\Testajax::user');
+        $router->respond('get',  '/',    'Land\Testajax::index')
+               ->respond('post', 'file', 'Land\Testajax::file')
+               ->respond('post', 'data', 'Land\Testajax::data')
+               ->respond('post', 'user', 'Land\Testajax::user')
+               ->respond('get', '/blog', 'Blog\Home::index');
     }
 }
 

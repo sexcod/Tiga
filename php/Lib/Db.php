@@ -38,23 +38,25 @@ use PDO;
 
 class Db 
 {
-    private $dsn = 'sqlite:qzumba.db';
-    private $user = null;
-    private $passw = null;
-    private $conn = null;
+    private $config =   null;
+    
+    private $conn =     null;
+    private $sql    =   null;
+    
+    private $result =   null;
+    private $rows =     0;
+    
+    private $error =    [];
 
-    private $sql    = null;
-    private $result = null;
-    private $rows = 0;
-    private $error = [];
 
-
-    function __construct($cfg = false)
+    function __construct($config = null)
     {
-        if(is_array($cfg)){
-            $this->dsn = $cfg['dsn'];
-            $this->user = $cfg['user'];
-            $this->passw = $cfg['passw'];
+        if(is_array($config)){
+            $this->config = $config;
+        } elseif(method_exists('Config\Neos\Database', 'get')){
+            $this->config = \Config\Neos\Database::get($config);
+        }else{
+            trigger_error('DataBase configurations not found!');           
         }
     }
 
@@ -62,9 +64,9 @@ class Db
     {
         if($this->conn == null)
             try{
-            $this->conn = new PDO(  $this->dsn,
-                                    $this->user,
-                                    $this->passw);
+            $this->conn = new PDO(  $this->config['dsn'],
+                                    $this->config['user'],
+                                    $this->config['passw']);
             $this->conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
             } catch (PDOException $e){
             trigger_error('Data base not connected!');

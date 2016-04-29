@@ -35,7 +35,6 @@
 namespace Lib;
 
 use Lib\Db;
-use Config\Database;
 
 
 class User
@@ -70,9 +69,11 @@ class User
 			foreach($config as $i=>$d){
 				if(isset($this->dbConfig[$i])) $this->dbConfig[$i] = $d;
 			}
-		} else $this->dbConfig = Database::getUserConfig();
+		} elseif(method_exists('Config\Neos\Database', 'getUserConfig')){
+            $this->dbConfig = \Config\Neos\Database::getUserConfig();
+        }
 
-		$this->db = new Db(Database::get());		
+		$this->db = new Db;		
 	}
 
 	/**

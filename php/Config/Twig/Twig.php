@@ -1,11 +1,11 @@
 <?php
 /**
- * Limp - less is more in PHP
+ * NEOS PHP FRAMEWORK
  * @copyright   Bill Rocha - http://google.com/+BillRocha
  * @license     MIT
  * @author      Bill Rocha - prbr@ymail.com
  * @version     0.0.1
- * @package     Config
+ * @package     Config\Twig
  * @access      public
  * @since       0.3.0
  *
@@ -32,43 +32,25 @@
  * THE SOFTWARE.
  */
 
+namespace Config\Twig;
 
-namespace Config;
-
-class Database
+class Twig
 {
-	static $config = ['mysql'=>['dsn'=>'mysql:host=localhost;dbname=blogger;charset=utf8',
-						 		'user'=>'blogger',
-						 		'passw'=>'blogger#123456'
-						 	   ],
-			   		  'sqlite'=>['dsn'=>'sqlite.db']
-			   		 ];
-	static $default = 'mysql';
+	private static $node = null;
 
-    //Configuração da tabela de usuário | Limp\Util\User
-    static $userTable = ['table'=>'user',
-                         'id'=>'id',
-                         'name'=>'name',
-                         'token'=>'token',
-                         'life'=>'life',
-                         'login'=>'login',
-                         'password'=>'passw',
-                         'level'=>'level',
-                         'status'=>'status'];
-    
-    static function get($alias = null)
-    {
-    	if($alias === null) return static::$config[static::$default];
-    	if(isset(static::$config[$alias])) return static::$config[$alias];
-    	else return false;
-    }
+	//Get static Twig
+	static function this($template = null)
+	{
+		if(is_object(static::$node)) return static::$node;
 
-    static function getDefault()
-    {
-    	return static::$default;
+		//Path to HTML templates
+		if($template === null) 
+			$template = defined('_HTML') ? _HTML : dirname(dirname(__DIR__)).'/html/';
+
+		$template = rtrim($template, ' /\\'); 
+
+		// Start Twig template engine
+		$loader = new \Twig_Loader_Filesystem($template);
+		return static::$node = new \Twig_Environment($loader, ['cache'=>$template.'/cache']);
 	}
-
-    static function getUserConfig(){
-        return static::$userTable;
-    }
 }

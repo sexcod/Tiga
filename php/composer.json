@@ -1,0 +1,49 @@
+{
+
+    "name": "neos/tiga",
+    "type": "framework",
+    "description": "Micro PHP Framework",
+    "keywords": ["micro framework","Php starter"],
+    "homepage": "https://neos.tk/tiga",
+    "license": "MIT",
+    "authors": [{
+        "name": "Bill Rocha",
+        "email": "prbr@ymail.com"
+    }],
+    "config": {
+        "vendor-dir": "Composer",
+        "bin-dir": "Composer/bin",
+        "preferred-install": "dist"
+    },
+    "archive": {
+        "exclude": ["/doc", "/*.json", "/.git", "/*.md", "/Config"]
+    },
+    "require": {
+        "php": ">=5.6.0",
+        "twig/twig": "~1"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Config\\": "Config/",
+            "Lib\\": "Lib/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "Tests/StackTest.php"
+        ]
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "php ./tiga optimize"
+        ],
+        "post-update-cmd": [
+            "php ./tiga optimize"
+        ],
+        "post-create-project-cmd": [
+            "php ./tiga key:generate"
+        ]
+    }
+}
