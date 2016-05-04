@@ -32,7 +32,7 @@
     },
     "autoload-dev": {
         "classmap": [
-            "Tests/StackTest.php"
+            "php/Tests/StackTest.php"
         ]
     },
     "scripts": {
