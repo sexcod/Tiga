@@ -1,4 +1,4 @@
-![Tiga](https://github.com/sexcod/Tiga/blob/master/img/logoTiga.png)        
+![Tiga](https://github.com/sexcod/Tiga/blob/master/img/logoTG_256x105.png)        
 ©NEOS {**TIGA**} PHP Framework   
 Project started in autumn 2016 by [Bill Rocha](https://google.com/+BillRocha)
 
