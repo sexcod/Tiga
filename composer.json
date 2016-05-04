@@ -11,12 +11,12 @@
         "email": "prbr@ymail.com"
     }],
     "config": {
-        "vendor-dir": "Composer",
-        "bin-dir": "Composer/bin",
+        "vendor-dir": "php/Composer",
+        "bin-dir": "php/Composer/bin",
         "preferred-install": "dist"
     },
     "archive": {
-        "exclude": ["/doc", "/*.json", "/.git", "/*.md", "/Config"]
+        "exclude": ["/doc", "/*.json", "/.git", "/*.md", "/php/Config"]
     },
     "require": {
         "php": ">=5.5.0",
@@ -26,8 +26,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Config\\": "Config/",
-            "Lib\\": "Lib/"
+            "Config\\": "php/Config/",
+            "Lib\\": "php/Lib/"
         }
     },
     "autoload-dev": {
@@ -37,13 +37,13 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "php ./tiga optimize"
+            "php ./php/tiga optimize"
         ],
         "post-update-cmd": [
-            "php ./tiga optimize"
+            "php ./php/tiga optimize"
         ],
         "post-create-project-cmd": [
-            "php ./tiga key:generate"
+            "php ./php/tiga key:generate"
         ]
     }
 }
