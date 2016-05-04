@@ -1,9 +1,6 @@
-# Tiga
+![Tiga](https://github.com/sexcod/Tiga/blob/master/img/logoTiga.png)        
 ©NEOS {**TIGA**} PHP Framework   
 Project started in autumn 2016 by [Bill Rocha](https://google.com/+BillRocha)
-
-![Experimental](https://github.com/sexcod/Tiga/blob/master/img/expicon.png)   
-_Experimental: Do **not use** in production!_
 
 ### Alpha version install
 
@@ -17,5 +14,8 @@ _Experimental: Do **not use** in production!_
 Type in your browser: http://localhost
 
 Required: [PHP 5.5.+](http://www.php.net) & [Composer](https://getcomposer.org/) & [OpenSSL](http://php.net/manual/pt_BR/openssl.installation.php)
+
+![Experimental](https://github.com/sexcod/Tiga/blob/master/img/expicon.png)   
+_Experimental: Do **not use** in production!_
 
 
