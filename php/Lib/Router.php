@@ -34,6 +34,8 @@ class Router
 
     private $defaultController = 'Resource\Main';
     private $defaultAction = 'pageNotFound';
+    
+    private $namespacePrefix = ''; //namespace prefix for MVC systems - ex.: '\ Controller'
 
     static $node = null;
 
@@ -80,7 +82,7 @@ class Router
 
         //Name format to Controller namespace
         $tmp = explode('\\', str_replace('/', '\\', $ctrl));
-        $ctrl = '';
+        $ctrl = $this->namespacePrefix;
         foreach($tmp as $tmp1){
             $ctrl .= '\\'.ucfirst($tmp1);
         }
