@@ -52,7 +52,7 @@ class Router
     private $defaultController = 'Resource\Main';
     private $defaultAction = 'pageNotFound';
     
-    //namespace prefix for MVC systems - ex.: '\ Controller'
+    //namespace prefix for MVC systems - ex.: '\Controller'
     private $namespacePrefix = ''; 
 
     static $node = null;
