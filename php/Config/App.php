@@ -35,7 +35,6 @@
 // Defaults
 error_reporting(E_ALL ^ E_STRICT ^ E_WARNING);
 setlocale (LC_ALL, 'pt_BR');
-mb_internal_encoding('UTF-8');
 date_default_timezone_set('America/Sao_Paulo'); 
 
 // Developer only
