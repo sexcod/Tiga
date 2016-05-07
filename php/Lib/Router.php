@@ -95,7 +95,7 @@ class Router
         if (method_exists($controller, $action))
             return $controller->$action();
         else
-            return $controller->{static::$defaultAction}();
+            return $controller->{$this->defaultAction}();
     }
 
     /**
@@ -187,6 +187,33 @@ class Router
     {
         return $this->method;
     }
+    
+    //SETS
+    function setSeparator($v)
+    {
+        $this->separator = $v;
+        return $this;
+    }
+    
+    function setDefaultController($v)
+    {
+        $this->defaultController = trim( str_replace('/', '\\', $v), '\\/ ');
+        return $this;
+    }
+    
+    function setDefaultAction($v)
+    {
+        $this->defaultAction = trim($v, '\\/ ');
+        return $this;
+    }
+    
+    function setNamespacePrefix($v)
+    {
+        $this->namespacePrefix = $v === '' ? '' : '\\'.trim( str_replace('/', '\\', $v), '\\/ ');
+        return $this;
+    }
+    
+    
 
     /**
      * Mount 
