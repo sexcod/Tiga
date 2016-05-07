@@ -136,20 +136,20 @@ class Debug
 
 	private static function getErrorName($errno)
 	{
-		$lst[E_ERROR] = 		'E_ERROR';
-		$lst[E_WARNING] = 		'E_WARNING';
-		$lst[E_PARSE] = 		'E_PARSE';
-		$lst[E_NOTICE] = 		'E_NOTICE';
-		$lst[E_CORE_ERROR] = 		'E_CORE_ERROR';
-		$lst[E_CORE_WARNING] = 		'E_CORE_WARNING';
-		$lst[E_COMPILE_ERROR] = 	'E_COMPILE_ERROR';
-		$lst[E_COMPILE_WARNING] = 	'E_COMPILE_WARNING';
-		$lst[E_USER_ERROR] = 		'E_USER_ERROR';
-		$lst[E_USER_WARNING] = 		'E_USER_WARNING';
-		$lst[E_USER_NOTICE] = 		'E_USER_NOTICE';
-		$lst[E_ALL] = 			'E_ALL';
-		$lst[E_STRICT] = 		'E_STRICT';
-		$lst[E_RECOVERABLE_ERROR] = 	'E_RECOVERABLE_ERROR';
+		$lst[E_ERROR] =             'E_ERROR';
+		$lst[E_WARNING] =           'E_WARNING';
+		$lst[E_PARSE] =             'E_PARSE';
+		$lst[E_NOTICE] =            'E_NOTICE';
+		$lst[E_CORE_ERROR] =        'E_CORE_ERROR';
+		$lst[E_CORE_WARNING] =      'E_CORE_WARNING';
+		$lst[E_COMPILE_ERROR] =     'E_COMPILE_ERROR';
+		$lst[E_COMPILE_WARNING] =   'E_COMPILE_WARNING';
+		$lst[E_USER_ERROR] =        'E_USER_ERROR';
+		$lst[E_USER_WARNING] =      'E_USER_WARNING';
+		$lst[E_USER_NOTICE] =       'E_USER_NOTICE';
+		$lst[E_ALL] =               'E_ALL';
+		$lst[E_STRICT] =            'E_STRICT';
+		$lst[E_RECOVERABLE_ERROR] = 'E_RECOVERABLE_ERROR';
 		
 		return $ret = $lst[$errno] ? $lst[$errno] : 'Error ('.$errno.')';
 	} 
