@@ -1,24 +1,39 @@
 <?php
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Limp - less is more in PHP
+ * @copyright   Bill Rocha - http://google.com/+BillRocha
+ * @license     MIT
+ * @author      Bill Rocha - prbr@ymail.com
+ * @version     0.0.1
+ * @package     Library\Neos
+ * @access      public
+ * @since       0.3.0
+ *
+ * The MIT License
+ *
+ * Copyright 2015 http://google.com/+BillRocha.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
  */
 
 namespace Lib;
 
-/**
- * Description of router
- *
- * @author Bill
- */
-
-/**
- * Description of router
- *
- * @author Bill
- */
 class Router 
 {
 
@@ -35,10 +50,75 @@ class Router
     private $defaultController = 'Resource\Main';
     private $defaultAction = 'pageNotFound';
     
-    private $namespacePrefix = ''; //namespace prefix for MVC systems - ex.: '\ Controller'
+    //namespace prefix for MVC systems - ex.: '\ Controller'
+    private $namespacePrefix = ''; 
 
     static $node = null;
+    
+    //GETs
+    function getUrl() 
+    {
+        return $this->url;
+    }
 
+    function getHttp() 
+    {
+        return $this->http;
+    }
+
+    function getBase() 
+    {
+        return $this->base;
+    }
+
+    function getRequest() 
+    {
+        return $this->request;
+    }
+
+    function getRouters() 
+    {
+        return $this->routers;
+    }
+
+    function getAll() 
+    {
+        return $this->all;
+    }
+
+    function getMethod() 
+    {
+        return $this->method;
+    }
+    
+    //SETs
+    function setSeparator($v)
+    {
+        $this->separator = $v;
+        return $this;
+    }
+    
+    function setDefaultController($v)
+    {
+        $this->defaultController = trim( str_replace('/', '\\', $v), '\\/ ');
+        return $this;
+    }
+    
+    function setDefaultAction($v)
+    {
+        $this->defaultAction = trim($v, '\\/ ');
+        return $this;
+    }
+    
+    function setNamespacePrefix($v)
+    {
+        $this->namespacePrefix = $v === '' ? '' : '\\'.trim( str_replace('/', '\\', $v), '\\/ ');
+        return $this;
+    }
+    
+    /**
+     * Constructor  
+     */
     function __construct( 
         $request = null, 
         $url = null)
@@ -70,7 +150,7 @@ class Router
     }
 
     /**
-     * Run controller by user request
+     * Make happen...
      *
      */
     function run()
@@ -128,7 +208,7 @@ class Router
     }
 
     /**
-     * Resolve 
+     * Resolve routers
      * 
      */
     function resolve() 
@@ -137,83 +217,20 @@ class Router
         $route = $this->searchRouter($this->all);
 
         //now: search for access method
-        if ($route === false && isset($this->routers[$this->method])) {
+        if ($route === false && isset($this->routers[$this->method]))
             $route = $this->searchRouter($this->routers[$this->method]);
-        }
 
         //not match...
         if ($route === false) {
-            $route['controller'] = $route['action'] = $route['params'] = null;
-        } elseif (is_callable($route['controller'])) {
-            //call the handling function with the URL parameters
-            $route = call_user_func_array($route['controller'], $route['params']);
+            $route['controller'] = 
+            $route['action'] = 
+            $route['params'] = 
+            $route['request'] = null;
         }
-        //out with decoded router OR false
+        
+        //out with decoded router || all null
         return $route;
     }
-
-    //Gets
-    function getUrl() 
-    {
-        return $this->url;
-    }
-
-    function getHttp() 
-    {
-        return $this->http;
-    }
-
-    function getBase() 
-    {
-        return $this->base;
-    }
-
-    function getRequest() 
-    {
-        return $this->request;
-    }
-
-    function getRouters() 
-    {
-        return $this->routers;
-    }
-
-    function getAll() 
-    {
-        return $this->all;
-    }
-
-    function getMethod() 
-    {
-        return $this->method;
-    }
-    
-    //SETS
-    function setSeparator($v)
-    {
-        $this->separator = $v;
-        return $this;
-    }
-    
-    function setDefaultController($v)
-    {
-        $this->defaultController = trim( str_replace('/', '\\', $v), '\\/ ');
-        return $this;
-    }
-    
-    function setDefaultAction($v)
-    {
-        $this->defaultAction = trim($v, '\\/ ');
-        return $this;
-    }
-    
-    function setNamespacePrefix($v)
-    {
-        $this->namespacePrefix = $v === '' ? '' : '\\'.trim( str_replace('/', '\\', $v), '\\/ ');
-        return $this;
-    }
-    
-    
 
     /**
      * Mount 
@@ -233,7 +250,6 @@ class Router
 
         //URL & REQST Constants:
         defined('_RQST') || define('_RQST', urldecode(isset($_SERVER['REQUEST_URI']) ? urldecode(trim(str_replace($base, '', trim($_SERVER['REQUEST_URI'])), ' /')) : ''));
-
         defined('_URL') || define('_URL', isset($_SERVER['SERVER_NAME']) ? $http . $_SERVER['SERVER_NAME'] . $base . '/' : '');
 
         $this->request = _RQST;
