@@ -47,6 +47,8 @@ class Router
     private $method = 'GET';
     private $separator = '::';
 
+    private $controller = '';
+    private $action = '';
     private $defaultController = 'Resource\Main';
     private $defaultAction = 'pageNotFound';
     
@@ -55,7 +57,7 @@ class Router
 
     static $node = null;
     
-    //GETs
+    //GETs -----------------------------------------------------------------
     function getUrl() 
     {
         return $this->url;
@@ -91,7 +93,27 @@ class Router
         return $this->method;
     }
     
-    //SETs
+    function getController() 
+    {
+        return $this->controller;
+    }
+
+    function getAction() 
+    {
+        return $this->action;
+    }
+
+    function getSeparator() 
+    {
+        return $this->separator;
+    }
+
+    function getParams()
+    {
+        return count($this->params) > 0 ? $this->params : null;
+    }
+
+    //SETs -----------------------------------------------------------------
     function setSeparator($v)
     {
         $this->separator = $v;
@@ -153,7 +175,7 @@ class Router
      * Make happen...
      *
      */
-    function run()
+    function run($log = false)
     {
         $res = $this->resolve();
 
@@ -167,19 +189,53 @@ class Router
             $ctrl .= '\\'.ucfirst($tmp1);
         }
 
+        //save controller param
+        $this->controller = $ctrl;
+        $this->action = $action;
+
         //instantiate the controller
         $controller = new $ctrl(['params' => $res['params'], 'request' => $this->request]);
 
         $this->params = $res['params'];
 
-        if (method_exists($controller, $action))
+        if (method_exists($controller, $action)){
+            if(is_callable($log)) $log($this, __CLASS__); //call debuglog
             return $controller->$action();
-        else
+        } else {
+            $this->action = $this->defaultAction; //set Action
+            if(is_callable($log)) $log($this, __CLASS__); //call debuglog
             return $controller->{$this->defaultAction}();
+        }
     }
 
     /**
-     * Insert routers
+     * Resolve routers
+     * 
+     */
+    function resolve() 
+    {
+        //first: serach in ALL
+        $route = $this->searchRouter($this->all);
+
+        //now: search for access method
+        if ($route === false && isset($this->routers[$this->method]))
+            $route = $this->searchRouter($this->routers[$this->method]);
+
+        //not match...
+        if ($route === false)
+            $route['controller'] = $route['action'] = $route['params'] = $route['request'] = null;
+
+        //set params
+        $this->controller = $route['controller'];
+        $this->action = $route['action'];
+        $this->params = $route['params'];
+
+        //out with decoded router OR all null
+        return $route;
+    }
+
+    /**
+     * Insert/config routers
      *
      */
     function respond(
@@ -205,31 +261,6 @@ class Router
             }
         }
         return $this;
-    }
-
-    /**
-     * Resolve routers
-     * 
-     */
-    function resolve() 
-    {
-        //first: serach in ALL
-        $route = $this->searchRouter($this->all);
-
-        //now: search for access method
-        if ($route === false && isset($this->routers[$this->method]))
-            $route = $this->searchRouter($this->routers[$this->method]);
-
-        //not match...
-        if ($route === false) {
-            $route['controller'] = 
-            $route['action'] = 
-            $route['params'] = 
-            $route['request'] = null;
-        }
-        
-        //out with decoded router || all null
-        return $route;
     }
 
     /**
@@ -332,6 +363,4 @@ class Router
         }
         return $method;
     }
-
 }
-
