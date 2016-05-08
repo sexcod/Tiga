@@ -1,4 +1,5 @@
-# Colaboradores
+[<< Database](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/database.md)
+ | [Home](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/README.md)
 
 Nenhum projeto open source como este poderia existir sem a colaborações expontânea de pessoas de talento e uma grande visão de futuro!
 
@@ -8,10 +9,10 @@ Faça parte desse time agora mesmo!
 
 
 ### Bill Rocha 
-Concepção original do **Tiga** PHP Framework.   
-Desenvolvedor, consultor e programador web (server/client-side and mobile devices)    
-LinkedIn: https://www.linkedin.com/in/billrocha    
-Google: https://google.com/+BillRocha
+- [x] Concepção original do **Tiga** PHP Framework.   
+- [x] Desenvolvedor, consultor e programador web (server/client-side and mobile devices)    
+- [x] LinkedIn: https://www.linkedin.com/in/billrocha    
+- [x] Google: https://google.com/+BillRocha
   
 #### Your name here?!
 _Type your description here_
