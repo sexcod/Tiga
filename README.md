@@ -2,7 +2,7 @@
 ©NEOS {**TIGA**} PHP Framework   
 Project started in autumn 2016 by [Bill Rocha](https://google.com/+BillRocha)
 
-### Alpha version install
+### Running
 Clone this repository      
 
     git clone https://github.com/sexcod/Tiga.git  
