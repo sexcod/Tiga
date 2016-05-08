@@ -12,7 +12,9 @@ Faça parte desse time agora mesmo!
 - [x] Concepção original do **Tiga** PHP Framework.   
 - [x] Desenvolvedor, consultor e programador web (server/client-side and mobile devices)    
 - [x] LinkedIn: https://www.linkedin.com/in/billrocha    
-- [x] Google: https://google.com/+BillRocha
+- [x] Google: https://google.com/+BillRocha  
+
+---
   
 #### Your name here?!
 _Type your description here_
