@@ -15,7 +15,7 @@ Or create a project by Composer **[recommended]**
 Test in PHP builtin server
 
     php -S localhost:80 
-    And type in your browser: http://localhost
+    Now, type in your browser: http://localhost
 
 ### Requirements:       
 [PHP 5.5.+](http://www.php.net)         
