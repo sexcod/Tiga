@@ -1,6 +1,6 @@
 [<< Database](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/database.md)
- | [Home](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/README.md)
-
+ | [Home](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/README.md)  
+# Colaboradores  
 Nenhum projeto open source como este poderia existir sem a colaborações expontânea de pessoas de talento e uma grande visão de futuro!
 
 Colabores são pessoas diferenciadas e por tal reconhecidas e desejadas para compor equipes em grandes empresas do setor. Fazer parte desse projeto pode te abrir grandes oportunidades em sua carreira profissional. Além disso, conhecer pessoas interessantes, trocar ideias, adquirir conhecimento e muito mais.
