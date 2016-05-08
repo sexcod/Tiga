@@ -3,4 +3,5 @@
  | [Debug >>](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/debug.md)
 
 
-# Rotedor 
+# Roteador 
+**Simples, rápido e muito fácil de configurar**
