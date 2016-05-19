@@ -32,7 +32,7 @@ O primeiro arquivo contém as configurações mínimas que serão usadas ao long
 
 ##Configuração do Ambiente
 
-*[ TODO: criar esse trecho do manual. ]*
+[ TODO: criar esse trecho do manual. ]
 
 Em seguida é necessário saber que tipo de recurso foi solicitado. 
 
@@ -54,9 +54,10 @@ A aparência desse arquivo de configuração pode ser vista aqui:
 7          $router->respond('get',      '/',       'Site\Page::index')
 8                 ->respond('post',     '/login',  'User\Access::login')
 9                 ->respond('get|post', '/logout/(*.)', 'User\Access', 'logout')
-10                ->respond('all',      '/ajuda/(\w+)', function ($topico) { exit(_HTML.'ajuda/'.$topico.'.html'); });
-11      }
-12 }
+10                ->respond('all',      '/ajuda/(\w+)', function ($topico) { 
+11                                                          exit(_HTML.'ajuda/'.$topico.'.html'); });
+12      }
+13 }
 ```  
 
 O objeto Config\Neos\Router é o padrão nesse sistema, porém, outros routers (roteadores) podem ser usados ou combinados para adicionar ainda mais funcionalidades ao sistema.
@@ -65,13 +66,13 @@ O objeto Config\Neos\Router é o padrão nesse sistema, porém, outros routers (
 
 Na linha **1** temos a definição do namespace desse objeto.
 
-A função **routers** deve receber um objeto Router como argumento passado por referencia. Esse objeto é o próprio Router em si, que no caso da configuração default é [**Lib\Router**](https://github.com/sexcod/Tiga/tree/master/php/Lib/Router.php). A própria classe Lib\Router está configurada para buscar esse arquivo de configuração automaticamente, através do **namespace** Config\Neos\Router. "**Neos**" é o "vendor" desse sistema, uma vêz que o **Tiga** é uma versão baseada no NEOS PHP Framework.
+A função **routers** deve receber um objeto Router como argumento passado por referência. Esse objeto é o próprio Router definido no frontcontroller (index.php), que no caso da configuração default é [**Lib\Router**](https://github.com/sexcod/Tiga/tree/master/php/Lib/Router.php). A própria classe Lib\Router está configurada para buscar esse arquivo de configuração automaticamente, através do namespace Config\Neos\Router ("Neos" é o "vendor" desse sistema, uma vêz que o **Tiga** é uma versão baseada no NEOS PHP Framework).
 
-Na linha **7** (em diante) temos uma chamada ao método **respond** que tem a responsabilidade de carregar as rotas definidas pelo desenvolvedor da aplicação, apresentando a seguinte sintaxe:
+Na linha **7** (em diante) temos várias chamadas ao método **respond** que carrega os paràmetros das **rotas** definidas pelo desenvolvedor da aplicação, apresentando a seguinte sintaxe nos seus argumentos (parâmetros):
 
 **Argumentos**
 
-1. **Tipo de acesso**: deve ser separado por um caractere " **|** " quando houver mais de um tipo. Os tipos reconhecidos até essa versão são: <code>get|post|delete|put|patch|all</code>. A string pode ser com letras maiúsculas ou minúscula.
+1. **Tipo de acesso**: deve ser separado por um caractere " **|** " quando houver mais de um tipo. Os tipos reconhecidos até essa versão são: <code>get|post|delete|put|patch|all</code>. A string pode ser com letras maiúsculas ou minúscula e tipos não reconhecidos serão considerados GET.
 2. **Requisição por URL amigável**: Você também pode definir uma **url simples** ou uma **expressão regular** que capture ou defina uma determinada url de requisição. O Router analiza cada uma das configurações em busca da **primeira** que corresponda a requisição de acesso. Por isso, a **ordem** dessas configurações pode influenciar - **tenha atenção aqui**.
 3. **Alvo ou Controlador da requisição**. Devido a grande flexibilidade do Router, esse argumento (parâmetro) pode ser passado em três formatos: 
 
