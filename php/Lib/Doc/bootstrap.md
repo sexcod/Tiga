@@ -6,7 +6,15 @@
 O arquivo **index.php** é o front controller do TIGA. Localizado no root da aplicação (servidor web) é o ponto de entrada para toda a requisição feita ao servidor que não seja para um recurso (caminho/arquivo) real.
 Em um servidor com o Apache, o arquivo **.htaccess** é o resposnsável por configurar o módulo **rewrite** que "direciona" todas as requisições para o arquivo **index.php**. 
 
-Esta é a forma mais simples de iniciar uma aplicação com o **TIGA**, a partir do front controller *(index.php)*: 
+```
+1  RewriteEngine On
+2  RewriteCond %{REQUEST_FILENAME} !-d
+3  RewriteCond %{REQUEST_FILENAME} !-f
+4  RewriteRule . index.php [L]
+```
+Configurações semelhantes podem ser feitas em servidores NGINX ou Windows IIS (entre outros).
+
+Este é código mais simples para iniciar uma aplicação com o **TIGA**, a partir do front controller *(index.php)*: 
 
 ```php
 1  <?php
