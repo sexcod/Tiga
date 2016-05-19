@@ -28,13 +28,19 @@ Este é código mais simples para iniciar uma aplicação com o **TIGA**, a part
 
 Como pode ser visto acima, duas coisas são necessárias para a iniciação de uma aplicação PHP: **as configurações e o roteador**.
 
-O primeiro arquivo contém as configurações mínimas que serão usadas ao longo de toda a "vida" dessa aplicação. Demais configurações serão carregadas conforme a demanda,no decorrer do trabalho realizado por essa requisição.
+O primeiro arquivo contém as configurações mínimas que serão usadas ao longo de toda a "vida" dessa aplicação. Demais configurações serão carregadas conforme a demanda, no decorrer do trabalho realizado por essa requisição.
+
+##Configuração do Ambiente
+
+*[ TODO: criar esse trecho do manual. ]*
 
 Em seguida é necessário saber que tipo de recurso foi solicitado. 
 
+##Roteador 
+
 Uma aplicação web (por exemplo) executa uma série de procedimentos e processamentos que, em conjunto, configuram um web site completo. Normalmente essas requisições são originadas por um usuário através de um navegador web, mas, também podem ter as mais variadas ferramentas e canais de acesso. A aplicação PHP deve estar preparada para identificar de forma inteligente essa requisição e convocar corretamente o objeto responsável pela execução dos processos necessários para entregar o produto dessa requisição.
 
-Nesse projeto, o gerenciamento das requisições se dá pela classe **Router** *(Lib/Router)* com seu arquivo de configuração situado em *\Config\Neos\Router*. Neste arquivo de configuração são definidas as rotas para os **controladores de processos**, com base no tipo e dados da requisição. Assim, apenas editando essa configuração, a aplicação pode gerenciar desde requisições de um navegador web convencional até formatos de acesso como de APIs (restfull).
+Nesse projeto, o gerenciamento das requisições se dá pela classe **Router** (Lib/Router) com seu arquivo de configuração situado em **Config\Neos\Router**. Neste arquivo de configuração são definidas as rotas para os **controladores de processos**, com base no tipo e dados da requisição. Assim, apenas editando essa configuração, a aplicação pode gerenciar desde requisições de um navegador web convencional até formatos de acesso como de APIs (restfull).
 
 A aparência desse arquivo de configuração pode ser vista aqui:
 
@@ -57,7 +63,7 @@ A aparência desse arquivo de configuração pode ser vista aqui:
 16 }
 ```  
 
-O objeto *Config\Neos\Router* é o padrão nesse sitema, porém, outros routers (roteadores) podem ser usados ou combinados para adicionar ainda mais funcionalidades ao sistema.
+O objeto Config\Neos\Router é o padrão nesse sitema, porém, outros routers (roteadores) podem ser usados ou combinados para adicionar ainda mais funcionalidades ao sistema.
 
 ###Como funciona
 
