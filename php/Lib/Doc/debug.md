@@ -5,28 +5,6 @@
 
 # Debug
 
-
-
-**Rascunhos iniciais para classe Lib\Debug**
-
-Exemplo de como configurar a geração de **logs** para o Router com a classe **Debug**
-
-## Front Controller 
-O arquivo **index.php** é o front controller do TIGA. Localizado no root da aplicação (servidor web) é o ponto de entrada para toda a requisição feita ao servidor que não seja para um recurso (caminho/arquivo) real.
-Em um servidor com o Apache, o arquivo **.htaccess** é o resposnsável por configurar o módulo **rewrite** que "direciona" todas as requisições para o arquivo **index.php**. 
-
-Esta é a forma mais simples de iniciar uma aplicação com o **TIGA**, a partir do front controller *(index.php)*: 
-
-```php
-<?php
-  
-// include Application Config
-include 'php/Config/App.php';
-  
-// Running the application
-(new Lib\Router)->run();
-```  
-
 ### Função Log        
 O caminho padrão para os arquivos de log é **/php/Logs/NameSpace/ClassName.php**. Os arquivos têm um tamanho preconfigurado e, depois que seu tamanho supera esse limite este é renomeado - recebendo a extenção ".bkp" - e um novo arquivo de log passa a ser escrito com o nome original.
 
