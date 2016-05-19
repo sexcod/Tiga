@@ -82,14 +82,14 @@ Na linha **7** (em diante) temos várias chamadas ao método **respond** que car
     
     * Uma **função anônima** que pode receber os parâmetros da expressão regular (se usada) no segundo argumento do método **respond**, além dos recursos disponíveis no sistema (linha 10).
 
-Apesar de conceitualmente o sistema funcionar como um **MVC**, o "controller" pode ser qualquer objeto instalado dentro da pasta *"root/php/"*, bem como **qualquer namespace válido**. Isso confere uma extraordinária flexibilidade ao sistema que pode ter em uma mesma aplicação o MVC, Rest, HMVC, Modular, etc. O desenvolvedor tem **toda** liberdade para usar o que mais adequado for a cada objeto/requisição de sua aplicação. 
+Apesar de conceitualmente o sistema funcionar como um **MVC**, o "controller" pode ser qualquer objeto instalado dentro da pasta *"{ root }/php/"*, bem como **qualquer namespace válido**. Isso confere uma extraordinária flexibilidade ao sistema que pode ter em uma mesma aplicação o MVC, Rest, HMVC, Modular, etc. O desenvolvedor tem **toda** liberdade para usar o que mais adequado for a cada objeto/requisição de sua aplicação. 
 
 A título de exemplo, apenas, vamos considerar um blog com acesso ao estilo Wordpress:
 
 ```php
 1  $router->respond('get|post', 'blog(/\d{4}(/\d{2}(/\d{2}(/[a-z0-9_-]+)?)?)?)?', 'Blog\Article::show');
 ```
-Esse exemplo captura uma url como **www.seu_site.com/blog/2016/11/23/titulo_da_materia**, acessado tanto por uma requisição GET quanto POST, carregando um módulo de **Blog** no caminho *{root}/app/Blog/Article.php* e chamando o método **show** dessa classe. Os parâmetros passados pela url podem ser capturados no método usando o seguinte código:
+Esse exemplo captura uma url como **www.seu_site.com/blog/2016/11/23/titulo_da_materia**, acessado tanto por uma requisição GET quanto POST, carregando um módulo de **Blog** no caminho *{ root }/app/Blog/Article.php* e chamando o método **show** dessa classe. Os parâmetros passados pela url podem ser capturados no método usando o seguinte código:
 
 ```php
 1  namespace Blog;
