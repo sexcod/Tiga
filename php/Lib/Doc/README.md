@@ -9,7 +9,7 @@ Para conseguir informações mais completas procure os desenvolvedores listados 
 ## Índice
 
 * [Instalação](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/instalacao.md) - git/composer & cia   
-* [Bootstrap](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/bootstrap.md) - o front controller do **TIGA**   
+* [Front Controller](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/bootstrap.md) - respondendo a uma requisição no **TIGA**   
 * [Constantes](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/constantes.md) - reduzido número de constante necessárias para rodar   
 * ...
 * ...
