@@ -66,7 +66,7 @@ O objeto Config\Neos\Router é o padrão nesse sistema, porém, outros routers (
 
 Na linha **1** temos a definição do namespace desse objeto.
 
-A função **routers** deve receber um objeto Router como argumento passado por referência. Esse objeto é o próprio Router definido no frontcontroller (index.php), que no caso da configuração default é [**Lib\Router**](https://github.com/sexcod/Tiga/tree/master/php/Lib/Router.php). A própria classe Lib\Router está configurada para buscar esse arquivo de configuração automaticamente, através do **namespace Config\Neos\Router** *("Neos" é o "vendor" desse sistema, uma vêz que o **Tiga** é uma versão baseada no NEOS PHP Framework)*.
+A função **routers** deve receber um objeto Router como argumento passado por referência. Esse objeto é o próprio Router definido no frontcontroller (index.php), que no caso da configuração default é [**Lib\Router**](https://github.com/sexcod/Tiga/tree/master/php/Lib/Router.php). A própria classe Lib\Router está configurada para buscar esse arquivo de configuração automaticamente, através do **namespace Config\Neos\Router** *("Neos" é o "vendor" desse sistema, uma vêz que o Tiga é uma versão baseada no NEOS PHP Framework)*.
 
 Na linha **7** (em diante) temos várias chamadas ao método **respond** que carrega os paràmetros das **rotas** definidas pelo desenvolvedor da aplicação, apresentando a seguinte sintaxe nos seus argumentos (parâmetros):
 
