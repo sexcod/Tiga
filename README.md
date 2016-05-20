@@ -28,4 +28,8 @@ Test in PHP builtin server
 _Experimental: Do **not use** in production!_       
 See this [document](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/README.md) pages for more help (I'm sorry: portuguese only).
 
+---
+
+Acesse a [**documentação**](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/README.md) em português do Brasil para obter mais informações.
+
 
