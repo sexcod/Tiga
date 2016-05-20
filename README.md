@@ -18,7 +18,8 @@ Test in PHP builtin server
     Now, type in your browser: http://localhost
 
 ### Requirements:       
-- [x] [PHP 5.5.+](http://www.php.net)         
+- [x] [PHP 5.5.+](http://www.php.net) (7+ it's cool!)
+- [x] [PDO](http://php.net/manual/pt_BR/book.pdo.php) & database driver(s)
 - [x] [Composer](https://getcomposer.org/)      
 - [x] [OpenSSL](http://php.net/manual/pt_BR/openssl.installation.php)
 
