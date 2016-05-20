@@ -29,7 +29,7 @@ Para um teste rápido da instalação você pode acessar diretamente a url do se
 
 Em seguida, digite em seu navegador <code>http://localhost</code> e será mostrada a página inicial de sua aplicação.
 
-### Requirementos:
+### Requerimentos:
 Você precisa confirmar se tem os seguintes recursos instalados em seu sistema para rodar corretamente um projeto com o TIGA:
 
 - [x] [PHP 5.5.+](http://www.php.net) ( se possível use a **versão 7+** )  
