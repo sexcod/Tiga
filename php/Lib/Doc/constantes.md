@@ -10,7 +10,7 @@ O Tiga usa as seguintes constantes definidas no arquivo [**Config\App.php**](htt
 
 <table>
 <tr><th>Constante</th><th>Descrição</th></tr>
-<tr><th align="left" width="140">_WWW</th><td>Caminho dos arquivos públicos - o arquivo index.php e os demais recursos web (CSS, JS, etc) devem estar neste local;</td></tr>
+<tr><th align="left" width="140">_WWW</th><td width="730">Caminho dos arquivos públicos - o arquivo index.php e os demais recursos web (CSS, JS, etc) devem estar neste local;</td></tr>
 
 <tr><th align="left">_APP</th><td>Localização da pasta contendo todo os arquivos de PHP (inclusive do Composer) e configurações da aplicação;</td></tr>
 
@@ -22,13 +22,13 @@ O Tiga usa as seguintes constantes definidas no arquivo [**Config\App.php**](htt
 </table>
 .
 
-O roteador padrão do Tiga ([Lib\Router](https://github.com/sexcod/Tiga/tree/master/php/Lib/Router.php))define mais duas outras constantes que são muito imnportantes para a sua aplicação e, caso prefira usar outro router, deve ser definida manualmente. 
+O roteador padrão do Tiga ([Lib\Router](https://github.com/sexcod/Tiga/tree/master/php/Lib/Router.php)) define mais duas outras constantes que são muito imnportantes para a sua aplicação e, caso prefira usar outro router, deve ser definida manualmente. 
 
 São elas:
 
 <table>
 <tr><th>Constante</th><th>Descrição</th></tr>
-<tr><th align="left" width="140">_RQSR</th><td>Contém os parâmetros da URL de acesso;</td></tr>
+<tr><th align="left" width="140">_RQST</th><td width="730">Contém os parâmetros da URL de acesso;</td></tr>
 <tr><th align="left">_URL</th><td>A URL base do site.</td></tr>
 </table>
 
@@ -79,6 +79,8 @@ define("_APP", dirname(__DIR__).'/php/');
 A segunda alternativa consiste em abrir o arquivo de configuração ([{ root }/php/Config/App.php](https://github.com/sexcod/Tiga/tree/master/php/Config/App.php)) e o roteador ([{ root }/php/Lib/Router.php](https://github.com/sexcod/Tiga/tree/master/php/Lib/Router.php)), procurar as linhas com as declarações "define" e alterar os seus valores conforme a necessidade do seu projeto. Lembre-se, porém, que no caso de **_URL** e **_RQST** estas são obtidas a partir dos dados do próprio ambiente e servidor web - tenha atenção a isso.
 
 ---
-[TOP](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/constantes.md#)
+<a href="https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/constantes.md#"> Top </a>
 
-
+<a href="https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/bootstrap.md"><< Front Controller </a>
+ | <a href="https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/README.md"> Home </a>
+ | <a href="https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/router.md"> Router >></a>
