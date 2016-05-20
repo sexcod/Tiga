@@ -1,5 +1,5 @@
-# TIGA
-**NEOS { TIGA } PHP FRAMEWORK**
+![Tiga](https://github.com/sexcod/Tiga/blob/master/img/logoTG_256x105.png)        
+©NEOS {**TIGA**} PHP Framework 
 
 Este pequeno manual em constante construção e revisão é direcionado ao usuário do TIGA que precisa de referencia de fácil e rápida consulta.
 Não se trata, portanto, de um **manual de uso** completo e, consequentemente, não se destina a quem tem pouca experiencia com frameworks e PHP.
