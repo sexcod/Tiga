@@ -1,5 +1,6 @@
 [Home](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/README.md)
- | [Front Controller >>](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/bootstrap.md)
+ | [Como Funciona](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/proposta.md)
+ | [Front Controller](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/bootstrap.md)
 
 
 # Instalação
