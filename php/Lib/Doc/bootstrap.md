@@ -1,6 +1,6 @@
-[<< Instalação](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/instalacao.md)
- | [Home](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/README.md)
- | [Constantes >>](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/constantes.md)
+[Home](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/README.md)
+ | [Instalação](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/instalacao.md)
+ | [Constantes](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/constantes.md)
 # Front Controller
 
 O arquivo **index.php** é o front controller do TIGA. Localizado no root da aplicação (servidor web) é o ponto de entrada para toda a requisição feita ao servidor que não seja para um recurso (caminho/arquivo) real.
@@ -112,4 +112,6 @@ O parâmetro *"params"* da classe extendida é acessado na linha **17** desse ex
 
 
 
-[Top](bootstrap.md)
+[Home](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/README.md)
+ | [Instalação](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/instalacao.md)
+ | [Constantes](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/constantes.md)
