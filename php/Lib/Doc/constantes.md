@@ -1,5 +1,5 @@
 [Home](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/README.md)
- | [Bootstrap](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/bootstrap.md)
+ | [Front Controller](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/bootstrap.md)
  | [Router](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/router.md)
 
 
@@ -80,5 +80,5 @@ A segunda alternativa consiste em abrir o arquivo de configuração ([{ root }/p
 
 ---
 [Home](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/README.md)
- | [Bootstrap](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/bootstrap.md)
+ | [Front Controller](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/bootstrap.md)
  | [Router](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/router.md)
