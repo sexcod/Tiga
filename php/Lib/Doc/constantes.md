@@ -22,7 +22,7 @@ O Tiga usa as seguintes constantes definidas no arquivo [**Config\App.php**](htt
 </table>
 .
 
-O roteador padrão do Tiga ([Lib\Router](https://github.com/sexcod/Tiga/tree/master/php/Lib/Router.php)) define mais duas outras constantes que são muito imnportantes para a sua aplicação e, caso prefira usar outro router, deve ser definida manualmente. 
+O roteador padrão do Tiga ([Lib\Router](https://github.com/sexcod/Tiga/tree/master/php/Lib/Router.php)) define mais duas outras constantes que são muito importantes para a sua aplicação e, caso prefira usar outro router, deve ser definida manualmente. 
 
 São elas:
 
