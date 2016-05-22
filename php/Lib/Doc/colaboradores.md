@@ -1,4 +1,4 @@
-[Home](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/README.md)  
+[Home](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/README.md)
  | [Database](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/database.md)
  
 # Colaboradores  
@@ -21,5 +21,5 @@ Faça parte desse time agora mesmo!
 _Type your description here_
 
 
-[Home](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/README.md)  
+[Home](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/README.md)
  | [Database](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/database.md)
