@@ -8,21 +8,15 @@ Para conseguir informações mais completas procure os desenvolvedores listados 
 
 ## Índice
 
-* [Como Funciona](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/proposta.md) - A proposta do framework Tiga
-* [Instalação](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/instalacao.md) - git/composer & cia   
-* [Front Controller](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/bootstrap.md) - respondendo a uma requisição no **TIGA**   
-* [Constantes](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/constantes.md) - reduzido número de constante necessárias para rodar   
-* ...
-* ...
-* [Router](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/router.md) - como são configuradas e como funcionam
-* [Debug](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/debug.md) - error, exceptions, logs e etc   
-* ...
-* ...
-* [HTML](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/html.md) - the DocFactory template engine    
-* [DataBase](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/database.md) - trabalhando com banco de dados    
-* ...   
-* ...   
-* [Colaboradores](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/colaboradores.md) - mantenha contato com os colaboradores e seja um de nós
+* [Como Funciona](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/proposta.md) - A proposta do framework Tiga.
+* [Instalação](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/instalacao.md) - git/composer & cia.   
+* [Front Controller](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/bootstrap.md) - respondendo a uma requisição no **TIGA**.  
+* [Constantes](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/constantes.md) - reduzido número de constante necessárias para rodar.   
+* [Router](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/router.md) - como são configuradas e como funcionam.
+* [Debug](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/debug.md) - error, exceptions, logs e etc.   
+* [HTML](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/html.md) - the DocFactory template engine.    
+* [DataBase](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/database.md) - trabalhando com banco de dados.    
+* [Colaboradores](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/colaboradores.md) - mantenha contato com os colaboradores e seja um de nós.
 
 
 ## Colaboração
