@@ -1,5 +1,6 @@
-[<< Database](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/database.md)
- | [Home](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/README.md)  
+[Home](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/README.md)  
+ | [Database](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/database.md)
+ 
 # Colaboradores  
 Nenhum projeto open source como este poderia existir sem a colaborações expontânea de pessoas de talento e uma grande visão de futuro!
 
@@ -18,3 +19,7 @@ Faça parte desse time agora mesmo!
   
 #### Your name here?!
 _Type your description here_
+
+
+[Home](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/README.md)  
+ | [Database](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/database.md)
