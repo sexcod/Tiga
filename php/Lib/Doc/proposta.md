@@ -1,7 +1,7 @@
 [Home](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/README.md)
  | [Instalação](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/instalacao.md)
  
-# Proposta
+# A Proposta do Tiga
 
 Definitivamente não é possível construir uma estrutura que vai funcionar para **todo** e qualquer projeto web com PHP.
 
