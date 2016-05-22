@@ -8,7 +8,7 @@ Clone this repository
     git clone https://github.com/sexcod/Tiga.git  
     Composer update
     
-Or create a project by Composer <sup>_*recommended_</sup>
+Or create a project by Composer (_recommended_)
 
     Composer create-project neos/tiga 
 
