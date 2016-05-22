@@ -51,9 +51,9 @@ Da mesma forma, considerando a URL <code>https://meu_site.com/blog/2016/11/23/ti
 _URL:       https://meu_site.com/
 _RQST:      blog/2016/11/23/titulo-da-materia
 ```
-<sup>***Neste caso também a _URL virá sufixada com uma barra para facilitar a concatenação***</sup>
+<sup>***Neste caso também a _URL virá sufixada com uma barra para facilitar a concatenação.***</sup>
 
-Estas constantes podem ser usadas por qualquer classe que esteja usando o Tiga como framework. Você pode usar um script como o o seguinte e definir em sua classe essas constantes para manter compatibilidade com outros sistemas.
+Estas constantes podem ser usadas por qualquer classe que esteja usando o Tiga como framework. Você deve definir em sua classe essas constantes para manter compatibilidade com outros sistemas.
 
 ```php
 defined("_APP") || define("_APP", __DIR__.'/');
