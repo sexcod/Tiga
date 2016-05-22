@@ -45,7 +45,7 @@ _HTML:      /var/www/myApp/html/
 ```
 <sup>***Note que a barra no final do caminho já está presente para facilitar a concatenação.***</sup>
 
-Da mesma forma, considerando a URL <code>https://meu_site.com/blog/2016/11/23/titulo-da-materia</code> será obtido os seguintes valores nas constantes do roteador:
+Da mesma forma, considerando a URL <code>https://meu_site.com/blog/2016/11/23/titulo-da-materia</code> serão obtidos os seguintes valores nas constantes do roteador:
 
 ```
 _URL:       https://meu_site.com/
