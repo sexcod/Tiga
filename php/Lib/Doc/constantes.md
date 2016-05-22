@@ -1,6 +1,6 @@
-[<< Bootstrap](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/bootstrap.md)
- | [Home](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/README.md)
- | [Router >>](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/router.md)
+[Home](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/README.md)
+ | [Bootstrap](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/bootstrap.md)
+ | [Router](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/router.md)
 
 
 #Constantes
@@ -79,8 +79,6 @@ define("_APP", dirname(__DIR__).'/php/');
 A segunda alternativa consiste em abrir o arquivo de configuração ([{ root }/php/Config/App.php](https://github.com/sexcod/Tiga/tree/master/php/Config/App.php)) e o roteador ([{ root }/php/Lib/Router.php](https://github.com/sexcod/Tiga/tree/master/php/Lib/Router.php)), procurar as linhas com as declarações "define" e alterar os seus valores conforme a necessidade do seu projeto. Lembre-se, porém, que no caso de **_URL** e **_RQST** estas são obtidas a partir dos dados do próprio ambiente e servidor web - tenha atenção a isso.
 
 ---
-<a href="https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/constantes.md#"> Top </a>
-
-<a href="https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/bootstrap.md"><< Front Controller </a>
- | <a href="https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/README.md"> Home </a>
- | <a href="https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/router.md"> Router >></a>
+[Home](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/README.md)
+ | [Bootstrap](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/bootstrap.md)
+ | [Router](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/router.md)
