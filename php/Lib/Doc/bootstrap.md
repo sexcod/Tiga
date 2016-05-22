@@ -110,7 +110,7 @@ Usamos uma classe auxiliar [**Resource\Main**](https://github.com/sexcod/Tiga/tr
 O parâmetro *"params"* da classe extendida é acessado na linha **17** desse exemplo. Se trata de um array com os dados recuperados da expressão regular configurada no código anterior. 
 
 
-
+---
 
 [Home](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/README.md)
  | [Instalação](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/instalacao.md)

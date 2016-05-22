@@ -82,7 +82,7 @@ include 'php/Config/App.php';
                       });    
 ``` 
 
-
+---
 [Home](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/README.md)
  | [Router](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/router.md)
  | [HTML](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/html.md)

@@ -20,6 +20,6 @@ Faça parte desse time agora mesmo!
 #### Your name here?!
 _Type your description here_
 
-
+---
 [Home](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/README.md)
  | [Database](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/database.md)

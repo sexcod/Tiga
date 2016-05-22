@@ -40,6 +40,8 @@ Você precisa confirmar se tem os seguintes recursos instalados em seu sistema p
 
 Outros recursos deverão ser instalados (disponibilizados) conforme a demanda de sua aplicação.
 
+
+---
 [Home](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/README.md)
  | [Como Funciona](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/proposta.md)
  | [Front Controller](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/bootstrap.md)

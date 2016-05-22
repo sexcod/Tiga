@@ -73,6 +73,6 @@ Aqui acontece uma das "magias" que tornam o Tiga um verdadeiro **smart framework
 
 ------- TODO: criar texto...
 
-
+---
 [Home](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/README.md)
  | [Instalação](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/instalacao.md)
