@@ -8,15 +8,15 @@ Para conseguir informações mais completas procure os desenvolvedores listados 
 
 ## Índice
 
-* [Como Funciona](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/proposta.md) - A proposta do framework Tiga.
-* [Instalação](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/instalacao.md) - Git, Composer & cia.   
-* [Front Controller](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/bootstrap.md) - Respondendo a uma requisição no **TIGA**.  
-* [Constantes](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/constantes.md) - Reduzido número de constante necessárias para rodar.   
-* [Router](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/router.md) - Como são configuradas e como funcionam.
-* [Debug](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/debug.md) - Error, exceptions, logs e etc.   
-* [HTML](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/html.md) - The DocFactory template engine.    
-* [DataBase](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/database.md) - Trabalhando com banco de dados.    
-* [Colaboradores](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/colaboradores.md) - Mantenha contato com os colaboradores e seja um de nós.
+* [Como Funciona](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/proposta.md)
+* [Instalação](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/instalacao.md)
+* [Front Controller](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/bootstrap.md)  
+* [Constantes](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/constantes.md)
+* [Router](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/router.md)
+* [Debug](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/debug.md)
+* [HTML](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/html.md)
+* [DataBase](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/database.md)
+* [Colaboradores](https://github.com/sexcod/Tiga/tree/master/php/Lib/Doc/colaboradores.md)
 
 
 ## Colaboração
